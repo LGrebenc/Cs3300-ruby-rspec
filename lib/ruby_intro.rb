@@ -32,7 +32,19 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  #initalize result to -1
+  result = -1
+  #if the array is empty return 0
+  if arr.empty?
+    result = 0
+  #if the array contains two elements that sum to n, return true
+  elsif arr.uniq.combination(2).any? { |a,b| n.equal?(a+b) } do
+    result = true
+  #otherwise return false
+  else
+    result = false
+  end
+  return result
 end
 
 # Part 2
