@@ -38,7 +38,7 @@ def sum_to_n? arr, n
   if arr.empty?
     result = 0
   #if the array contains two elements that sum to n, return true
-  elsif arr.uniq.combination(2).any? { |a,b| n.equal?(a+b) } do
+  elsif arr.combination(2).select { |a,b| n.equal? a+b } do ####=--GETTING ERRORS HERE--=####
     result = true
   #otherwise return false
   else
