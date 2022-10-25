@@ -32,17 +32,15 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  #initalize result to -1
-  result = -1
+  #initalize result to
+  result = false
   #if the array is empty return 0
   if arr.empty?
-    result = 0
+    puts "Error: array is empty."#result = 0
   #if the array contains two elements that sum to n, return true
-  elsif arr.combination(2).select { |a,b| n.equal? a+b } do ####=--GETTING ERRORS HERE--=####
+  else a.combination(2).select { |a, b| n == a + b }.each do ####=--GETTING ERRORS HERE--=####
     result = true
   #otherwise return false
-  else
-    result = false
   end
   return result
 end
@@ -50,7 +48,7 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
