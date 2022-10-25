@@ -62,7 +62,22 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  #set result as false
+  result = false
+  #if s is not an empty string
+  unless s.empty?
+    #if s contains anything outside of 1 and 0, keep result set as false
+    if /([^0-1])/i.match?(s)
+      puts "Error: input is not a valid binary number."
+    #if s converted to decimal can be divided evenly by 4, set result as true
+    elsif (s.to_i(2) % 4) == 0
+      result = true
+    else
+      #user message
+      puts "Input is not a multiple of four."
+    end
+  end
+  return result
 end
 
 # Part 3
