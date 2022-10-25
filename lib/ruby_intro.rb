@@ -51,7 +51,14 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  #set result as false
+  result = false
+  #if s is not an empty string
+  unless s.empty?
+    #check if the first character of the string is not a vowel (ignoring case)
+    result = /#{s[0]}/i.match?("B C D F G H J K L M N P Q R S T V W X Y Z")
+  end
+  return result
 end
 
 def binary_multiple_of_4? s
