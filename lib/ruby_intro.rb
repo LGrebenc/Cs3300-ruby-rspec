@@ -38,9 +38,9 @@ def sum_to_n? arr, n
   if arr.empty?
     puts "Error: array is empty."#result = 0
   #if the array contains two elements that sum to n, return true
-  else a.combination(2).select { |a, b| n == a + b }.each do ####=--GETTING ERRORS HERE--=####
-    result = true
-  #otherwise return false
+  else arr.combination(2).to_a.select { |a, b| n == a + b }.each do
+    result = true; end
+#otherwise return false
   end
   return result
 end
